@@ -57,7 +57,7 @@ namespace Datos
         }
 
         public DataTable Search(string criterio){
-            SqlCommand cmd = new SqlCommand("BuscarContacto", sql);
+            SqlCommand cmd = new SqlCommand("BuscarContactoPorEmailONombre", sql);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@param", criterio);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
